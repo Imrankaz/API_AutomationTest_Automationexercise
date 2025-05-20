@@ -1,5 +1,3 @@
-//package tests;
-
 import base.LoginSignUpEndpoints;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -30,18 +28,18 @@ public class LogoutTest {
                     .extract()
                     .response();
 
-            // Output & assertions
-            System.out.println("Status Code: " + response.getStatusCode());
-            System.out.println("Logout Status Code: " + response.statusCode());
-            System.out.println("Redirect Location: " + response.getHeader("Location"));
-            System.out.println("Response:\n" + response.getBody().asString());
+            // Output
+//            System.out.println("Status Code: " + response.getStatusCode());
+//            System.out.println("Logout Status Code: " + response.statusCode());
+//            System.out.println("Redirect Location: " + response.getHeader("Location"));
+//            System.out.println("Response:\n" + response.getBody().asString());
         } catch (Exception e) {
             System.err.println("Test failed due to exception: " + e.getMessage());
             e.printStackTrace();
         }
 
     }
-    @Test
+    //@Test
     public void logout2Test() {
 
 

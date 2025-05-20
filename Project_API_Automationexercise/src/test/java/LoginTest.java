@@ -16,7 +16,7 @@ import Login.*;
 import base.LoginSignUpEndpoints;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-@ExtendWith(EmailOnFailure.class)
+//@ExtendWith(EmailOnFailure.class)
 public class LoginTest {
 
 
@@ -42,8 +42,8 @@ public class LoginTest {
             //-------------------------------------------------------------
             // Optional: assertion to verify error/success message in body
             if (response.asString().contains("Your email or password is incorrect!")) {
-                System.out.println("Your email or password is incorrect!");
-                System.out.println("Test Passed");
+                //System.out.println("Your email or password is incorrect!");
+                //System.out.println("Test Passed");
 
             }
             else {
@@ -86,8 +86,8 @@ public class LoginTest {
             //-------------------------------------------------------------
             // Optional: assertion to verify error/success message in body
             if (response.asString().contains("Your email or password is incorrect!")) {
-                System.out.println("Your email or password is incorrect!");
-                System.out.println("Test Passed");
+                //System.out.println("Your email or password is incorrect!");
+               // System.out.println("Test Passed");
 
             }
             else {
@@ -134,8 +134,8 @@ public class LoginTest {
             //-------------------------------------------------------------
             // Optional: assertion to verify error/success message in body
             if (response.asString().contains("Your email or password is incorrect!")) {
-                System.out.println("Your email or password is incorrect!");
-                System.out.println("Test Passed");
+                //System.out.println("Your email or password is incorrect!");
+                //System.out.println("Test Passed");
 
             }
             else {
@@ -174,10 +174,10 @@ public class LoginTest {
             System.out.println("Login successful.");
 
             // Output & assertions
-            System.out.println("loginResponse");
-            System.out.println("Status Code: " + loginResponse.getStatusCode());
-            System.out.println("Response:\n" + loginResponse.getBody().asString());
-            System.out.println("Logout Status Code: " + loginResponse.statusCode());
+//            System.out.println("loginResponse");
+//            System.out.println("Status Code: " + loginResponse.getStatusCode());
+//            System.out.println("Response:\n" + loginResponse.getBody().asString());
+//            System.out.println("Logout Status Code: " + loginResponse.statusCode());
 
             //-------------------------------------------------------------
             // Step 2: Follow the redirect to "/" HomePage
@@ -194,24 +194,24 @@ public class LoginTest {
                         .response();
 
             // Output & assertions
-            System.out.println("homeResponse");
-            System.out.println("Status Code: " + homeResponse.getStatusCode());
-            System.out.println("Response:\n" + homeResponse.getBody().asString());
-            System.out.println("Logout Status Code: " + homeResponse.statusCode());
+//            System.out.println("homeResponse");
+//            System.out.println("Status Code: " + homeResponse.getStatusCode());
+//            System.out.println("Response:\n" + homeResponse.getBody().asString());
+//            System.out.println("Logout Status Code: " + homeResponse.statusCode());
 
 
             // Assert the response status code
             loginResponse.then().statusCode(302);
             homeResponse.then().statusCode(200);
 
-            System.out.println("Login and redirect successful.");
-            System.out.println("Home Page");
+            //System.out.println("Login and redirect successful.");
+            //System.out.println("Home Page");
 
 
             //-------------------------------------------------------------
             if (loginResponse.asString().contains("<title>Automation Exercise</title>") ||
                     loginResponse.asString().contains("<title>Automation Exercise - Signup / Login</title>")) {
-                System.out.println("Found before redirect");
+                //System.out.println("Found before redirect");
 
             }   else {
                 System.out.println("loginResponse >> Redirected to Home page");
@@ -219,7 +219,7 @@ public class LoginTest {
             // Optional: assertion to verify error/success message in body
             if (homeResponse.asString().contains("<title>Automation Exercise</title>") ||
                     homeResponse.asString().contains("<title>Automation Exercise - Signup / Login</title>")){
-                System.out.println("homeResponse >> Test Passed");
+                //System.out.println("homeResponse >> Test Passed");
 
             }
             else {
@@ -264,7 +264,6 @@ public class LoginTest {
         e.printStackTrace();
     }
     }
-
 
 }
 

@@ -30,12 +30,12 @@ public class AccountFlowStepsP {
 
             response.then().body(containsString("Signup"));
             if (response.asString().contains("Enter Account Information")) {
-                System.out.println("Enter Account Information");
-                System.out.println("Test Passed");
+                //System.out.println("Enter Account Information");
+                //System.out.println("Test Passed");
 
             }
             else {
-                System.out.println("Invalid Login");
+                System.out.println("Test Failed");
             }
         }
         catch (Exception e){
@@ -64,28 +64,28 @@ public class AccountFlowStepsP {
                     .response();
 
             // Output & assertions
-            System.out.println("Status Code: " + response.getStatusCode());
-            System.out.println("Response:\n" + response.getBody().asString());
+            //System.out.println("Status Code: " + response.getStatusCode());
+            //System.out.println("Response:\n" + response.getBody().asString());
 
             //response.then().body(containsString("Account Created!"));
             if (response.asString().contains("Account Created!")) {
 
 
-                System.out.println("        Account Created!\n" +
-                        "        Congratulations! Your new account has been successfully created!\n" +
-                        "\n" +
-                        "        You can now take advantage of member privileges to enhance your online shopping experience with us.\n" +
-                        "\n" +
-                        "        Continue\n" +
-                        "        You have been successfully subscribed!");
+//                System.out.println("        Account Created!\n" +
+//                        "        Congratulations! Your new account has been successfully created!\n" +
+//                        "\n" +
+//                        "        You can now take advantage of member privileges to enhance your online shopping experience with us.\n" +
+//                        "\n" +
+//                        "        Continue\n" +
+//                        "        You have been successfully subscribed!");
 
 
-                System.out.println("Test Passed");
-                System.out.println(" Account Created fro >>   " + LoginData.Valid_email + "  >>   " + LoginData.Valid_password + "  >>  " + LoginData.Valid_name);
+//                System.out.println("Test Passed");
+//                System.out.println(" Account Created fro >>   " + LoginData.Valid_email + "  >>   " + LoginData.Valid_password + "  >>  " + LoginData.Valid_name);
 
 
             } else {
-                System.out.println("Test Failed");
+               // System.out.println("Test Failed");
             }
         } catch (Exception e){
         System.err.println("Test failed due to exception: " + e.getMessage());
@@ -119,7 +119,7 @@ public class AccountFlowStepsP {
             // Optional: assertion to verify error/success message in body
             if (response.asString().contains("<title>Automation Exercise</title>")) {
                 //System.out.println("Your email or password is incorrect!");
-                System.out.println("Found before redirect");
+                //System.out.println("Found before redirect");
 
             }   else {
                 System.out.println("Redirected to Home page");
@@ -160,10 +160,10 @@ public class AccountFlowStepsP {
                     .response();
 
             // Output & assertions
-            System.out.println("Status Code: " + response.getStatusCode());
-            System.out.println("Logout Status Code: " + response.statusCode());
-            System.out.println("Redirect Location: " + response.getHeader("Location"));
-            System.out.println("Response:\n" + response.getBody().asString());
+//            System.out.println("Status Code: " + response.getStatusCode());
+//            System.out.println("Logout Status Code: " + response.statusCode());
+//            System.out.println("Redirect Location: " + response.getHeader("Location"));
+//            System.out.println("Response:\n" + response.getBody().asString());
         } catch (Exception e){
         System.err.println("Test failed due to exception: " + e.getMessage());
         e.printStackTrace();
@@ -190,11 +190,11 @@ public class AccountFlowStepsP {
                     .response();
 
 
-            System.out.println("Status Code: " + response.getStatusCode());
-            System.out.println("Response Body:\n" + response.asString());
+//            System.out.println("Status Code: " + response.getStatusCode());
+//            System.out.println("Response Body:\n" + response.asString());
 
             if (response.asString().contains("Account Deleted")) {
-                System.out.println("✅ Account deleted successfully.");
+                //System.out.println("✅ Account deleted successfully.");
             } else {
                 System.out.println("⚠️ Deletion may not have been successful.");
             }

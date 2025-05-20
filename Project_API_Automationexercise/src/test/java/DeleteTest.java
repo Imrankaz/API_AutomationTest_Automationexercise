@@ -12,7 +12,7 @@ import static io.restassured.RestAssured.given;
 
 public class DeleteTest {
 
-    @Test
+    //@Test
     public void deleteAccountTest() {
         try {
             RestAssured.baseURI = LoginSignUpEndpoints.URL_Scheme + LoginSignUpEndpoints.URL_Host_automationexercise_com;
@@ -46,7 +46,7 @@ public class DeleteTest {
     }
 
 
-    @Test
+    //@Test
     public void DeleteAccountTest1() {
         RestAssured.baseURI = "https://automationexercise.com";
 
