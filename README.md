@@ -2,14 +2,12 @@
  Project_API_Automationexercise
 --------------------------------
 
-
 This project is built using Java 21 and Maven for API test automation with REST Assured and JUnit 5.
 It includes Allure for advanced reporting and support for sending test reports via email.
 
 --------------------------------------------------
 DEPENDENCIES USED (Defined in pom.xml)
 --------------------------------------------------
-
 
 Java version: 21
 Maven compiler plugin: 21 (source and target)
@@ -36,7 +34,6 @@ Maven Plugins:
 COMMANDS TO RUN TESTS AND GENERATE REPORTS
 --------------------------------------------------
 
-
 1. Run only tests:
    mvn clean test
 
@@ -50,17 +47,27 @@ COMMANDS TO RUN TESTS AND GENERATE REPORTS
 Note:
 - Allure CLI must be installed and added to your system PATH.
 - Download Allure CLI from: https://docs.qameta.io/allure/#_installing_a_commandline
+
+--------------------------------------------------
+VIEWING REPORTS
+--------------------------------------------------
+
+1. **Allure Report (locally)**  
+   View a visually rich test report using the Allure CLI.
+
+2. **Jenkins Report (CI)**  
+   Jenkins can also show test results and custom HTML reports.
+
+
 --------------------------------------------------
 EMAIL REPORTING SETUP
 --------------------------------------------------
-
 
 This project supports **automated email reporting** using JavaMail API.
 
 -----------------------------
 OPTION 1: Send Email from IDE
 -----------------------------
-
 
 1. Set up an email utility class using `javax.mail`.
 3. Update the Credentials file for Gmail. 
@@ -128,7 +135,6 @@ OPTION 2: Send Email from Jenkins
 --------------------------------------------------
 BEST PRACTICES
 --------------------------------------------------
-
 
 - Always run `mvn clean` before tests to avoid stale results.
 - Delete `target/` and `allure-results/` if tests/classes were renamed or removed.
