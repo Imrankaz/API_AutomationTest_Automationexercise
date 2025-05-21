@@ -23,8 +23,7 @@ public class LogoutTest {
                     //.get("/logout")
                     .get(LoginSignUpEndpoints.Logout_path_automationexercise_com)
                     .then()
-                    //.statusCode(200) // Expecting redirect
-                    .statusCode(300) // Expecting redirect
+                    .statusCode(200) // Expecting redirect
                     //.header("Location", anyOf(equalTo("/login"), equalTo("/"))) // Redirects to login or home
                     .extract()
                     .response();
