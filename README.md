@@ -1,6 +1,6 @@
-================================
+--------------------------------
  Project_API_Automationexercise
-================================
+--------------------------------
 
 
 This project is built using Java 21 and Maven for API test automation with REST Assured and JUnit 5.
@@ -57,9 +57,9 @@ EMAIL REPORTING SETUP
 
 This project supports **automated email reporting** using JavaMail API.
 
-=============================
+-----------------------------
 OPTION 1: Send Email from IDE
-=============================
+-----------------------------
 
 
 1. Set up an email utility class using `javax.mail`.
@@ -98,10 +98,9 @@ OPTION 1: Send Email from IDE
 - If using Gmail, enable 2FA and generate an App Password.
 - Allow "Less Secure Apps" if needed (not recommended for production).
 
-========================================
+---------------------------------
 OPTION 2: Send Email from Jenkins
-========================================
-
+---------------------------------
 
 1. Install **Email Extension Plugin** in Jenkins.
 
