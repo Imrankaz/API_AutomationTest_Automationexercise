@@ -14,7 +14,7 @@ public class AccountFlowStepsP {
 
     public void signUpPart1(String email, String password, String name) {
         try {
-            System.out.println("🔹 Step 1: SignUp Part 1");
+            //System.out.println("🔹 Step 1: SignUp Part 1");
 
 
             RestAssured.baseURI = LoginSignUpEndpoints.URL_Scheme +LoginSignUpEndpoints.URL_Host_automationexercise_com;
@@ -47,7 +47,7 @@ public class AccountFlowStepsP {
     public void signUpPart2(String email, String password, String name) {
         try {
 
-            System.out.println("🔹 Step 2: SignUp Part 2");
+            //System.out.println("🔹 Step 2: SignUp Part 2");
 
             RestAssured.baseURI = LoginSignUpEndpoints.URL_Scheme + LoginSignUpEndpoints.URL_Host_automationexercise_com;
 
@@ -96,7 +96,7 @@ public class AccountFlowStepsP {
 
 
     public void login(String email, String password) {
-        System.out.println("🔹 Step 3: Login");
+       // System.out.println("🔹 Step 3: Login");
 
 
         try {
@@ -143,7 +143,7 @@ public class AccountFlowStepsP {
 
     public void logout() {
         try {
-            System.out.println("Logout");
+           // System.out.println("Logout");
             RestAssured.baseURI = LoginSignUpEndpoints.URL_Scheme +LoginSignUpEndpoints.URL_Host_automationexercise_com;
 
             // Send GET request to /logout
@@ -173,9 +173,8 @@ public class AccountFlowStepsP {
 
     public void deleteAccount() {
         try {
+            // System.out.println("Delete Account");
             RestAssured.baseURI = LoginSignUpEndpoints.URL_Scheme +LoginSignUpEndpoints.URL_Host_automationexercise_com;
-
-
 
             // Send POST request
             Response response = given()

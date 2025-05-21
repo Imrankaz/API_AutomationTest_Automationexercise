@@ -16,7 +16,7 @@ import Login.*;
 import base.LoginSignUpEndpoints;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-//@ExtendWith(EmailOnFailure.class)
+@ExtendWith(EmailOnFailure.class)
 public class LoginTest {
 
 
@@ -173,11 +173,6 @@ public class LoginTest {
                         .response();
             System.out.println("Login successful.");
 
-            // Output & assertions
-//            System.out.println("loginResponse");
-//            System.out.println("Status Code: " + loginResponse.getStatusCode());
-//            System.out.println("Response:\n" + loginResponse.getBody().asString());
-//            System.out.println("Logout Status Code: " + loginResponse.statusCode());
 
             //-------------------------------------------------------------
             // Step 2: Follow the redirect to "/" HomePage
@@ -193,20 +188,10 @@ public class LoginTest {
                         .extract()
                         .response();
 
-            // Output & assertions
-//            System.out.println("homeResponse");
-//            System.out.println("Status Code: " + homeResponse.getStatusCode());
-//            System.out.println("Response:\n" + homeResponse.getBody().asString());
-//            System.out.println("Logout Status Code: " + homeResponse.statusCode());
-
 
             // Assert the response status code
             loginResponse.then().statusCode(302);
             homeResponse.then().statusCode(200);
-
-            //System.out.println("Login and redirect successful.");
-            //System.out.println("Home Page");
-
 
             //-------------------------------------------------------------
             if (loginResponse.asString().contains("<title>Automation Exercise</title>") ||

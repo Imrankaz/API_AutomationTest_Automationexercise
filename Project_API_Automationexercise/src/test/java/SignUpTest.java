@@ -13,7 +13,7 @@ import static org.hamcrest.Matchers.containsString;
 public class SignUpTest {
 
 
-    //@Test
+    @Test
     public void SignUpPart1Test1() {
 
         RestAssured.baseURI = LoginSignUpEndpoints.URL_Scheme +LoginSignUpEndpoints.URL_Host_automationexercise_com;
@@ -29,15 +29,15 @@ public class SignUpTest {
 
         response.then().body(containsString("Signup"));
         if (response.asString().contains("Enter Account Information")) {
-            System.out.println("Enter Account Information");
-            System.out.println("Test Passed");
+            //System.out.println("Enter Account Information");
+            //System.out.println("Test Passed");
         }
         else {
-            System.out.println("Invalid Login");
+            System.out.println("Test Failed");
         }
     }
 
-    //@Test
+    @Test
     public void SignUpPart2Test1() {
 
         RestAssured.baseURI = LoginSignUpEndpoints.URL_Scheme +LoginSignUpEndpoints.URL_Host_automationexercise_com;
@@ -55,9 +55,9 @@ public class SignUpTest {
                     .response();
 
         // Output & assertions
-        System.out.println("Status Code: " + response.getStatusCode());
-        System.out.println("Response:\n" + response.getBody().asString());
-        System.out.println("Cookies: " + response.getCookies());
+//        System.out.println("Status Code: " + response.getStatusCode());
+//        System.out.println("Response:\n" + response.getBody().asString());
+//        System.out.println("Cookies: " + response.getCookies());
 
         if (response.asString().contains("Account Created!")) {
 
@@ -67,7 +67,7 @@ public class SignUpTest {
             steps.deleteAccount();
         }
         else {
-            System.out.println("Invalid Login");
+            System.out.println("Test Failed");
         }
 
     }
